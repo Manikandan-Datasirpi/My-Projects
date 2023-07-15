@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Code with me|Projects</title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<link rel="icon" type="image/x-icon" href="binary.png">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+</head>
+<body>
+	
+	<header>
+		<div class="header">
+
+			<div class="logo-view">
+				<img class="logo-info" src="logo.png">
+			</div>
+
+			<div class="header-title">
+				<p>Code With Me</p>
+			</div>
+
+			<input type="checkbox" id="check" name="menu-check">
+			<label for="check">&#9776;</label>
+			<div class="header-topics">
+				<li><a href="index.html">HOME</a></li>
+				<li><a href="Project.html">PROJECT</a></li>
+				<li><a href="#">ABOUT</a></li>
+				<li><a href="#">CONTACT</a></li>
+			</div>
+		</div>
+	</header>
+
+	<div class="Main-Content">
+		<h2>1. Simple Calculator Using Python Tkinter</h2>
+
+		<br>
+
+		<p>
+			Let's see how to create a simple calculator in Python using Tkinter.
+		This Calculator GUI will consist of simple Arithmetic Operation.
+		
+	    </p>
+
+		<p>
+			Now for creating this Calculator, Python IDLE and Tkinter should 
+			already be installed in your system. You can download suitable python installer in <a href="Python.org">Python Package</a> as per system requirment. After you have successfully installed python you need to intall Tkinter (a Python's GUI package).
+		</p>
+		<br>
+		<h3>Use this command to install Tkinter:</h3>
+		<br>
+		<div class="Commands">
+			<p>pip install python-tk</p>
+		</div>
+		<br>
+		<h3>Importing Tkinter:</h3>
+		<br>
+		<div class="Commands">
+			<p>from tkinter import *</p> 
+		</div>
+		<br>
+		<h3>Calculator Program:</h3>
+		<br>
+		<div class="Commands">
+		<div class="Commands-program">
+				from tkinter import *
+				<br>
+				op=Tk()
+				<br>
+				op.title("Calculater")
+				<br>
+				op.iconbitmap("icon2.ico")
+				<br>
+				Input=Entry(op,width=30,borderwidth=2)
+				<br>
+				Input.grid(row=0,column=0,columnspan=4)
+				<br>
+				Label1=Label(op, text="      ").grid(row=1,column=0,columnspan=3)
+				<br>
+				def value(n):
+				<br>
+				    current=Input.get()
+				    <br>
+				    Input.delete(0,END)
+				    <br>
+				    Input.insert(0,current+n)
+				    <br>
+				    total=current+n
+				    <br>
+				    global result
+				    <br>
+				    result=total
+				    <br>
+				def equal():
+				<br>
+				    try:
+				    <br>
+				        c=eval(result)
+				        <br>
+				    except:
+				    <br>
+				        Input.delete(0,END)
+				        <br>
+				        c="Syntax Error"
+				        <br>
+				        Input.insert(0,c)
+				        <br>
+				    Input.delete(0,END)
+				    <br>
+				    Input.insert(0,c)
+				    <br>
+				def clear():
+				<br>
+				    Input.delete(0,END)
+				    <br>
+				#Define Button
+				<br>
+				Button1=Button(text="7",padx=20,pady=10,fg="green",command=lambda: value("7"))
+				<br>
+				Button2=Button(text="8",padx=20,pady=10,fg="green",command=lambda: value("8"))
+				<br>
+				Button3=Button(text="9",padx=20,pady=10,fg="green",command=lambda: value("9"))
+				<br>
+				Button_add=Button(text="+",padx=20,pady=10,fg="green",command=lambda: value("+"))
+				<br>
+				 
+				Button4=Button(text="6",padx=20,pady=10,fg="green",command=lambda: value("6"))
+				<br>
+				Button5=Button(text="5",padx=20,pady=10,fg="green",command=lambda: value("5"))
+				<br>
+				Button6=Button(text="4",padx=20,pady=10,fg="green",command=lambda: value("4"))
+				<br>
+				Button_sub=Button(text="-",padx=20,pady=10,fg="green",command=lambda: value("-"))
+				<br>
+				                
+				Button7=Button(text="3",padx=20,pady=10,fg="green",command=lambda: value("3"))
+				<br>
+				Button8=Button(text="2",padx=20,pady=10,fg="green",command=lambda: value("2"))
+				<br>
+				Button9=Button(text="1",padx=20,pady=10,fg="green",command=lambda: value("1"))
+				<br>
+				Button_multi=Button(text="*",padx=20,pady=10,fg="green",command=lambda: value("*"))
+				<br>
+
+				Button0=Button(text="0",padx=20,pady=10,fg="green",command=lambda: value("0"))
+				<br>
+				Button_div=Button(text="/",padx=20,pady=10,fg="green",command=lambda: value("/"))
+				<br>
+				Button_mod=Button(text="%",padx=20,pady=10,fg="green",command=lambda: value("%"))
+				<br>
+				Button_equal=Button(text="=",padx=20,pady=10,fg="green",command=equal)
+				<br>
+				Button_clear=Button(text="Clear",padx=95,pady=10,fg="green",command=clear)
+				<br>
+				                    
+				#Postion the button
+				<br>
+				Button1.grid(row=2,column=0)
+				<br>
+				Button2.grid(row=2,column=1)
+				<br>
+				Button3.grid(row=2,column=2)
+				<br>
+				Button_add.grid(row=2,column=3)
+				<br>
+				Button4.grid(row=3,column=0)
+				<br>
+				Button5.grid(row=3,column=1)
+				<br>
+				Button6.grid(row=3,column=2)
+				<br>
+				Button_sub.grid(row=3,column=3)
+				<br>
+
+				Button7.grid(row=4,column=0)
+				<br>
+				Button8.grid(row=4,column=1)
+				<br>
+				Button9.grid(row=4,column=2)
+				<br>
+				Button_multi.grid(row=4,column=3)
+				<br>
+				Button0.grid(row=5,column=0)
+				<br>
+				Button_div.grid(row=5,column=1)
+				<br>
+				Button_mod.grid(row=5,column=2)
+				<br>
+				Button_equal.grid(row=5,column=3)
+				<br>
+				Button_clear.grid(row=6,column=0,columnspan=4)
+				<br>
+				op.mainloop()
+				<br>
+		</div>
+		</div>
+		<br>
+		<h3>Output:</h3>
+		<br>
+		<div class="Pro-Img">
+		<img src="pro1.png">
+		</div>
+	</div>
+</body>
+</html>
