@@ -1,0 +1,39 @@
+@charset "ISO-8859-1";
+body
+{
+	background-image:url("images/lib.jpg");
+	background-size:cover;
+	background-repeat:no-repeat;
+}
+table
+{
+	font-size:120%;
+	margin:auto;
+	padding:2%;
+	line-height:300%;
+	background-color:#fff;
+	border-radius:5%;
+}
+input
+{
+	border:0px;
+  border-bottom:2px solid #0096FF;
+  font-size:100%;
+}
+#head
+{
+	text-align:center;
+}
+#log 
+{
+	text-align:center;
+}
+#but
+{
+	border-radius:10px;
+	font-size:110%;
+	padding-right:5%;
+	padding-left:5%;
+	background-color: #0096FF;
+	color:#fff;
+}
